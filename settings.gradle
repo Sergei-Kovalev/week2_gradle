@@ -6,3 +6,10 @@
  */
 
 rootProject.name = 'week2_gradle'
+include 'utils'
+include 'advanced'
+include 'advanced:core'
+findProject(':advanced:core')?.name = 'core'
+include 'advanced:api'
+findProject(':advanced:api')?.name = 'api'
+
